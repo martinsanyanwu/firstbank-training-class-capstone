@@ -9,6 +9,8 @@ import time
 
 app = Dash(__name__)
 
+# Define the path to your background image
+background_image_path = "Anastronautridingahorseinaphotorealisticstyle6.jpg"
 
 
 def generate_image_from_prompt(prompt):  
