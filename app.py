@@ -83,7 +83,7 @@ def generate_prompt(value):
 
 
 app.layout = html.Div([
-    html.H1(children='My Awesome Image Generation App', style={'textAlign':'center'}),
+    html.H1(children='My Awesome Image Generation App', style={'textAlign': 'center'}),
     dcc.Input(
         id="basic-prompt-input",
         type="text",
@@ -91,10 +91,9 @@ app.layout = html.Div([
         size="100",
     ),
     html.Button('Submit', id='submit-button', n_clicks=0),
-    html.Div(id='image-generation-output',
-             children=''),
-    html.Img(id="generated-image")
-])
+    html.Div(id='image-generation-output', children=''),
+    html.Img(id="generated-image"),
+], style={'backgroundImage': f'url("{background_image_path}")', 'backgroundSize': 'cover'})
 
 
 @callback(
